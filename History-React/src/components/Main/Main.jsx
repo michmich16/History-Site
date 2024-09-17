@@ -20,15 +20,19 @@ export const Main = () => {
     return (
         <>
             <main className={s.contentStyle}>
+                
                 {data ? (
                     <div className={s.contentData}>
                         {data.data?.Events?.map((event, index) => (
                             <div key={index} className={s.event}>
-                                <p><strong>{event.year}</strong></p>
+                                <p><strong>YEAR: {event.year}</strong></p>
                                 <p>{event.text}</p>
+                                <a href={event.links[0].link}>Read More</a>
+
                             </div>
                         ))}
                     </div>
+
                 ) : (
                     <p>Loading...</p>
                 )}

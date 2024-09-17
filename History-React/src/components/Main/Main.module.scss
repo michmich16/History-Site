@@ -1,11 +1,26 @@
 @import '../../assets/helper/Helper.module.scss';
 
 .contentStyle {
-    display: flex;
-    flex-direction: column;
     color: $kinda-white;
+    .contentData{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        font-size: 20px;
+        a{
+            color: $kinda-white;
+        }
+        .event{
+            width: 20rem;
+            text-align: right;
+            margin: auto;
+            &:nth-child(2n){
+                direction: revert;
+                text-align: left;
+                padding-top: 15rem;
+            }
+        }
+    }
 }
-
-
 
 
