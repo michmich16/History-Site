@@ -1,0 +1,40 @@
+@import '../../assets/helper/Helper.module.scss';
+
+.headerStyle {
+    background-image: url(../../assets/images/header.png);
+    background-position: center -25rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    width: 100%;
+    position: relative;
+
+    .headerContainer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 28rem;
+
+        .headerHero {
+            display: flex;
+            flex-direction: column;
+            background-color: $kinda-dark;
+            color: $kinda-gold;
+            margin: auto;
+            justify-content: center;
+            width: 39rem;
+            padding: 6rem 25rem;
+            border: solid 1rem $kinda-brown;
+            h1{
+                padding-bottom: 1rem;
+                font-size: 96px;
+                font-family: Limelight;
+            }
+            h4{
+                font-family: Linden Hill;
+                font-size: 32px;
+            }
+        }
+    }
+
+}

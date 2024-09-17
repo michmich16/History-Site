@@ -1,0 +1,23 @@
+@import '../../assets/helper/Helper.module.scss';
+
+.navStyle{
+    background-color: kinda-dark;
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+        padding: 12rem 20rem;
+        li{
+            list-style: none;
+            justify-content: center;
+            a{
+                color: $kinda-gold;
+                text-decoration: none;
+                font-size: 36px;
+                text-align: center;
+                font-size: Linden Hill;
+            }
+        }
+    }
+}
