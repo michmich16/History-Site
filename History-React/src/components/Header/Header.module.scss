@@ -1,40 +1,59 @@
 @import '../../assets/helper/Helper.module.scss';
 
 .headerStyle {
-    background-image: url(../../assets/images/header.png);
-    background-position: center -25rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 800px;
-    width: 100%;
-    position: relative;
+    img {
+        width: 100%;
+        height: 700px;
+        object-fit: cover;      
+    }
+    .headerHero {
+        display: flex;
+        position: relative; 
+        flex-direction: column;
+        background-color: $kinda-dark;
+        color: $kinda-gold;
+        margin: auto;
+        justify-content: center;
+        width: 35vw;
+        padding: 10vh 15vw;
+        border: solid 1rem $kinda-brown;
+        margin-top: -20rem;
+        z-index: 99;
 
-    .headerContainer {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 28rem;
-
-        .headerHero {
-            display: flex;
-            flex-direction: column;
-            background-color: $kinda-dark;
-            color: $kinda-gold;
-            margin: auto;
-            justify-content: center;
-            width: 39rem;
-            padding: 6rem 25rem;
-            border: solid 1rem $kinda-brown;
-            h1{
-                padding-bottom: 1rem;
-                font-size: 96px;
-                font-family: Limelight;
-            }
-            h4{
-                font-family: Linden Hill;
-                font-size: 32px;
-            }
+        .circle{
+            position: absolute;
+            border: 10px solid $kinda-yellow;
+            border-radius: 50%;
+            z-index: 999;
+        }
+       .circleTopLeft{
+        left: 5px;
+        top: 5px;
+       }
+       .circleTopRight{
+        right: 5px;
+        top: 5px;
+       }
+       .circleBottomLeft{
+        left: 5px;
+        bottom: 5px;
+       }
+       .circleBottomRight{
+        right: 5px;
+        bottom: 5px;
+       }
+    
+        h1 {
+            padding-bottom: 1rem;
+            font-size: 5rem;
+            font-family: Limelight;
+        }
+    
+        h4 {
+            font-family: Linden Hill;
+            font-size: 2rem;
         }
     }
 
 }
+

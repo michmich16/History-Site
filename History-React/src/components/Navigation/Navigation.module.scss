@@ -2,19 +2,21 @@
 
 .navStyle{
     background-color: kinda-dark;
+    margin-top: 3rem;
+    border-bottom: solid 18px $kinda-dark;
     ul{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         text-align: center;
-        padding: 12rem 20rem;
+        padding: 1rem 20vw;
         li{
             list-style: none;
             justify-content: center;
             a{
                 color: $kinda-gold;
                 text-decoration: none;
-                font-size: 36px;
+                font-size: 28px;
                 text-align: center;
                 font-size: Linden Hill;
             }
