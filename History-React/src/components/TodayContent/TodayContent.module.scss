@@ -4,6 +4,7 @@
 .contentStyle {
     color: $kinda-white;
     position: relative;
+    padding-top: 4rem;
 
     .circleTop {
         position: absolute;
@@ -36,13 +37,14 @@
 
         .timeLinePoint {
             display: inline-block;
-            position: relative; 
-            left: 50%;  
+            position: relative;
+            left: 50%;
             transform: translateX(-50%);
             height: 5px;
             width: 20rem;
-            background-color: $kinda-gold; 
+            background-color: $kinda-gold;
         }
+
         .circleContent {
             position: absolute;
             left: 50%;
@@ -58,13 +60,22 @@
 
         a {
             color: $kinda-white;
+            align-items: center;
+            display: inline-flex;
+            align-items: center;
+
+            img {
+                width: 35px;
+                height: 35px;
+                filter: invert(1);
+            }
         }
 
         .event {
             width: 20rem;
             text-align: right;
             margin: auto;
-            
+
 
             &:nth-child(2n) {
                 direction: revert;

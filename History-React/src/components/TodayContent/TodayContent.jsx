@@ -1,6 +1,7 @@
 import { useQueryClient, useQuery } from '@tanstack/react-query';
 import s from './TodayContent.module.scss';
 import { useState, useEffect } from 'react';
+import Book from '../../assets/images/icons8-bookmark.svg'
 
 export const TodayContent = () => {
 
@@ -37,7 +38,7 @@ export const TodayContent = () => {
                                 <span className={s.timeLinePoint}></span>
                                 <h4>YEAR: {event.year}</h4>
                                 <p>{event.text}</p>
-                                <a href={event.links[0].link}>Read More</a>
+                                <a href={event.links[0].link}>Read More <img src={Book}/></a>
 
                             </div>
                         ))}
