@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import {Content} from '../../components/Content/Content'
+import {TodayContent} from '../../components/TodayContent/TodayContent'
 
 export function Today(){
 
     return (
         <>
-        <Content/>
+        <TodayContent/>
         </>
     )
 }

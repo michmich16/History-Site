@@ -15,9 +15,9 @@ export const Navigation = () => {
         <>
             <nav className={s.navStyle}>
                 <ul>
-                    <li><NavLink to={'/Date'}>BY DATE</NavLink></li>
+                    <li><NavLink to={'/date'}>BY DATE</NavLink></li>
                     <li><NavLink to={'/'}>TODAY</NavLink></li>
-                    <li><NavLink to={'/Since'}>SINCE</NavLink></li>
+                    <li><NavLink to={'/since'}>SINCE</NavLink></li>
                 </ul>
             </nav>
         </>

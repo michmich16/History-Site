@@ -1,12 +1,12 @@
 import { useQueryClient, useQuery } from '@tanstack/react-query';
-import s from './Content.module.scss';
+import s from './TodayContent.module.scss';
 import { useState, useEffect } from 'react';
 
-export const Content = () => {
+export const TodayContent = () => {
 
     const url = 'https://history.muffinlabs.com/date';
 
-    const queryClient = useQueryClient()
+    // const queryClient = useQueryClient()
     const { isPending, error, data } = useQuery({
         queryKey: ['history'],
         queryFn: () => fetch(url)
@@ -35,7 +35,7 @@ export const Content = () => {
                             <div key={index} className={s.event}>
                                 <span className={s.circleContent}></span>
                                 <span className={s.timeLinePoint}></span>
-                                <h4><strong>YEAR: {event.year}</strong></h4>
+                                <h4>YEAR: {event.year}</h4>
                                 <p>{event.text}</p>
                                 <a href={event.links[0].link}>Read More</a>
 

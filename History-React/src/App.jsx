@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.scss'
 import { Header } from './components/Header/Header'
 import { Navigation } from './components/Navigation/Navigation'
-import { Content } from './components/Content/Content'
 import { MainLayout } from './layouts/MainLayout'
 import {Date} from './pages/Date/Date'
 import {Since} from './pages/Since/Since'
