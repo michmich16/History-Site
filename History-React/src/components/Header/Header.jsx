@@ -1,5 +1,6 @@
 import s from './Header.module.scss';
 import picture from '../../assets/images/header.png'
+import { Navigation } from '../Navigation/Navigation';
 
 export const Header = () => {
 
@@ -16,6 +17,7 @@ export const Header = () => {
                     <span className={`${s.circle} ${s.circleBottomRight}`}></span>
                 </div>
             </header>
+            <Navigation/>
         </>
     )
 }

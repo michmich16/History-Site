@@ -36,21 +36,22 @@
 
         .timeLinePoint {
             display: inline-block;
-            position: relative;  // Adjust this line
-            left: 50%;  // Align it with the timeline
+            position: relative; 
+            left: 50%;  
             transform: translateX(-50%);
             height: 5px;
             width: 20rem;
-            background-color: $kinda-gold;
-            margin-top: 2rem;  // Adjust this to position it vertically relative to the event
+            background-color: $kinda-gold; 
         }
         .circleContent {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            margin-top: 0.5rem;
-            border: 15px solid $kinda-gold;
-            background-color: $kinda-white;
+            margin-top: 1rem;
+            border: 2px solid $kinda-gold;
+            background-color: $kinda-black;
+            width: 25px;
+            height: 25px;
             border-radius: 50%;
             z-index: 999;
         }
@@ -63,6 +64,7 @@
             width: 20rem;
             text-align: right;
             margin: auto;
+            
 
             &:nth-child(2n) {
                 direction: revert;
