@@ -1,20 +1,70 @@
 @import '../../assets/helper/Helper.module.scss';
 
+
 .contentStyle {
     color: $kinda-white;
-    .contentData{
+    position: relative;
+
+    .circleTop {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 20px solid $kinda-gold;
+        border-radius: 50%;
+        z-index: 999;
+    }
+
+    .timeLine {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 5px;
+        height: 100%;
+        background-color: $kinda-gold;
+    }
+
+    .contentData {
         display: grid;
+        padding-top: 5rem;
         grid-template-columns: 1fr 1fr;
         gap: 5rem;
         font-size: 20px;
-        a{
+
+        h4 {
+            padding: 1rem 0;
+        }
+
+        .timeLinePoint {
+            display: inline-block;
+            position: relative;  // Adjust this line
+            left: 50%;  // Align it with the timeline
+            transform: translateX(-50%);
+            height: 5px;
+            width: 20rem;
+            background-color: $kinda-gold;
+            margin-top: 2rem;  // Adjust this to position it vertically relative to the event
+        }
+        .circleContent {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 0.5rem;
+            border: 15px solid $kinda-gold;
+            background-color: $kinda-white;
+            border-radius: 50%;
+            z-index: 999;
+        }
+
+        a {
             color: $kinda-white;
         }
-        .event{
+
+        .event {
             width: 20rem;
             text-align: right;
             margin: auto;
-            &:nth-child(2n){
+
+            &:nth-child(2n) {
                 direction: revert;
                 text-align: left;
                 padding-top: 15rem;
@@ -22,5 +72,3 @@
         }
     }
 }
-
-

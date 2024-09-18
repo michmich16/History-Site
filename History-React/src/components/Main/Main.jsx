@@ -20,22 +20,27 @@ export const Main = () => {
     return (
         <>
             <main className={s.contentStyle}>
-                
-                {data ? (
-                    <div className={s.contentData}>
-                        {data.data?.Events?.map((event, index) => (
-                            <div key={index} className={s.event}>
-                                <p><strong>YEAR: {event.year}</strong></p>
-                                <p>{event.text}</p>
-                                <a href={event.links[0].link}>Read More</a>
+                <span className={s.timeLine}></span>
+                    <span className={s.circleTop}></span>
 
-                            </div>
-                        ))}
-                    </div>
+                    {data ? (
+                        <div className={s.contentData}>
+                            {data.data?.Events?.map((event, index) => (
+                                <div key={index} className={s.event}>
+                                    <span className={s.circleContent}></span>
+                                    <h4><strong>YEAR: {event.year}</strong></h4>
+                                    <span className={s.timeLinePoint}></span>
+                                    <p>{event.text}</p>
+                                    <a href={event.links[0].link}>Read More</a>
 
-                ) : (
-                    <p>Loading...</p>
-                )}
+                                </div>
+                            ))}
+                        </div>
+
+                    ) : (
+                        <p>Loading...</p>
+                    )}
+              
             </main>
         </>
     );

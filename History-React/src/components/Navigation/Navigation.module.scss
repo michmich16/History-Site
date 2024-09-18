@@ -1,24 +1,27 @@
 @import '../../assets/helper/Helper.module.scss';
 
-.navStyle{
+.navStyle {
     background-color: kinda-dark;
     margin-top: 3rem;
     border-bottom: solid 18px $kinda-dark;
-    ul{
+
+    ul {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         text-align: center;
         padding: 1rem 20vw;
-        li{
+
+        li {
             list-style: none;
             justify-content: center;
-            a{
+
+            a {
                 color: $kinda-gold;
                 text-decoration: none;
-                font-size: 28px;
+                font-size: 30px;
                 text-align: center;
-                font-size: Linden Hill;
+                font-family: Linden Hill;
             }
         }
     }
