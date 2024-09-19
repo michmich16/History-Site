@@ -23,7 +23,7 @@ export const DateContent = () => {
         queryKey: ['onthisday', selectedMonth, selectedDay],
         queryFn: () => fetch(url).then((response) => response.json()),
         enabled: !!selectedMonth && !!selectedDay, 
-        staleTime: 1000 * 600, 
+        staleTime: 10000 * 600, 
     });
 
     const sortedEvents = data?.events?.sort((a, b) => a.year - b.year);

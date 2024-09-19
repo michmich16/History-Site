@@ -7,9 +7,8 @@ export const MainLayout = () =>{
 
     const location = useLocation();
 
-    // Effekt der opdaterer vores page title når location skifter
     useEffect(() => {
-      // Vi "slicer" det første tegn væk som er en skråstreg ("/").
+
       document.title = location.pathname.slice(1);
     }, [location]);
 

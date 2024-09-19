@@ -9,17 +9,15 @@ body {
   background-color: $kinda-dark;
   transition: all 0.3s ease;
 
-  // Default dark mode
-  filter: invert(0);
 
-  // Button styling
-  button {
+  .lightMode {
     position: absolute;
     right: 8rem;
     top: 70rem;
     background-color: transparent;
     border: none;
     cursor: pointer;
+
     @media only screen and (max-width: 600px) {
       right: 20rem;
       top: 62rem;
@@ -31,12 +29,26 @@ body {
   }
 }
 
-// Light mode class
 .light-mode {
   filter: invert(1);
 
-  // Re-invert button image to keep it correct in light mode
-  button img {
+}
+
+.upWard {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+
+  @media only screen and (max-width: 600px) {
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  img {
     filter: invert(1);
   }
 }

@@ -6,7 +6,7 @@ import { Navigation } from '../Navigation/Navigation';
 
 export const TodayContent = () => {
     const today = new Date();
-    const month = today.getMonth() + 1; //getMonth() er zero-based så skal +1
+    const month = today.getMonth() + 1; 
     const day = today.getDate();
     
     const url = `https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/${month}/${day}`;
