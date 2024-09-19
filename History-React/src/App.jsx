@@ -16,7 +16,6 @@ function App() {
     setIsLightMode(prevMode => !prevMode);
   };
 
-
   const handleScroll = () => {
     if (window.scrollY > 1200) { 
       setShowUpwardButton(true);
