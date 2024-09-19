@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 
 
-export function Since() {
+export function AboutPage() {
 
   return (
     <>

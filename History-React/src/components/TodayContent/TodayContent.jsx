@@ -1,54 +1,56 @@
-import { useQueryClient, useQuery } from '@tanstack/react-query';
+import { useQuery } from '@tanstack/react-query';
 import s from './TodayContent.module.scss';
-import { useState, useEffect } from 'react';
-import Book from '../../assets/images/icons8-bookmark.svg'
+import Book from '../../assets/images/icons8-bookmark.svg';
+import { Header } from '../Header/Header';
+import { Navigation } from '../Navigation/Navigation';
 
 export const TodayContent = () => {
+    const today = new Date();
+    const month = today.getMonth() + 1; //getMonth() er zero-based så skal +1
+    const day = today.getDate();
+    
+    const url = `https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/${month}/${day}`;
 
-    const url = 'https://history.muffinlabs.com/date';
-
-    // const queryClient = useQueryClient()
     const { isPending, error, data } = useQuery({
-        queryKey: ['history'],
-        queryFn: () => fetch(url)
-            .then((response) => response.json()),
-        staleTime: 1000 * 600,
+        queryKey: ['onthisday', month, day], 
+        queryFn: () => fetch(url).then((response) => response.json()),
+        staleTime: 10000 * 600, 
     });
-    console.log(data);
 
     if (isPending) {
-        return (<div>Loading...</div>)
+        return (<div className={s.LoadingPage}>Loading...</div>);
     }
 
     if (error) {
-        return (<div>Error...</div>)
+        return (<div>Error...</div>);
     }
+
+    const sortedEvents = data.events?.sort((a, b) => a.year - b.year);
 
     return (
         <>
+        <Header/>
+        <Navigation/>
             <main className={s.contentStyle}>
                 <span className={s.timeLine}></span>
                 <span className={s.circleTop}></span>
 
-                {data ? (
+                {sortedEvents ? (
                     <div className={s.contentData}>
-                        {data.data?.Events?.map((event, index) => (
+                        {sortedEvents.map((event, index) => (
                             <div key={index} className={s.event}>
+                                <h4>YEAR: {event.year}</h4>
                                 <span className={s.circleContent}></span>
                                 <span className={s.timeLinePoint}></span>
-                                <h4>YEAR: {event.year}</h4>
                                 <p>{event.text}</p>
-                                <a href={event.links[0].link}>Read More <img src={Book}/></a>
-
+                                <a href={event.pages[0]?.content_urls?.desktop?.page}>Read More <img src={Book} alt="Book icon" /></a>
                             </div>
                         ))}
                     </div>
-
                 ) : (
-                    <p>Loading...</p>
+                    <p>No data available</p>
                 )}
-
             </main>
         </>
     );
-}
+};

@@ -1,9 +1,42 @@
 @import '../src/assets/helper/Helper.module.scss';
-*{
-    padding: 0;
-    margin: 0;
+
+* {
+  padding: 0;
+  margin: 0;
 }
-body{
-    background-color: $kinda-black;
-    filter: invert(0);
+
+body {
+  background-color: $kinda-dark;
+  transition: all 0.3s ease;
+
+  // Default dark mode
+  filter: invert(0);
+
+  // Button styling
+  button {
+    position: absolute;
+    right: 8rem;
+    top: 70rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    @media only screen and (max-width: 600px) {
+      right: 20rem;
+      top: 62rem;
+    }
+
+    img {
+      filter: invert(1);
+    }
+  }
+}
+
+// Light mode class
+.light-mode {
+  filter: invert(1);
+
+  // Re-invert button image to keep it correct in light mode
+  button img {
+    filter: invert(1);
+  }
 }

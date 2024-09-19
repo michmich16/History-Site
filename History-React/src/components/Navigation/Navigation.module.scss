@@ -1,9 +1,10 @@
 @import '../../assets/helper/Helper.module.scss';
 
 .navStyle {
-    background-color: kinda-dark;
+    background-color: $kinda-dark;
     margin-top: 3rem;
     border-bottom: solid 18px $kinda-dark;
+    position: relative;
 
     ul {
         display: flex;
@@ -11,6 +12,12 @@
         justify-content: space-between;
         text-align: center;
         padding: 1rem 20vw;
+        @media only screen and (max-width: 600px) {
+            padding: 1rem 2rem;
+            display: flex;
+            flex-direction: column;
+        }
+
 
         li {
             list-style: none;
@@ -22,7 +29,11 @@
                 font-size: 30px;
                 text-align: center;
                 font-family: Linden Hill;
+                @media only screen and (max-width: 600px) {
+                    font-size: 23px;
+                }
             }
         }
     }
+
 }

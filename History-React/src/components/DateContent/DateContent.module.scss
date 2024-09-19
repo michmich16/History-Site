@@ -1,0 +1,147 @@
+@import '../../assets/helper/Helper.module.scss';
+
+
+.contentStyle {
+    color: $kinda-white;
+    position: relative;
+    padding-top: 4rem;
+    width: 80rem;
+    margin: auto;
+    background-color: $kinda-dark;
+    @media only screen and (max-width: 600px) {
+        color: $kinda-white;
+        position: relative;
+        padding-top: 4rem;
+        width: 100%;
+        margin: auto;
+        background-color: $kinda-dark; 
+    }
+
+    .circleTop {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 20px solid $kinda-gold;
+        border-radius: 50%;
+        z-index: 999;
+        @media only screen and (max-width: 600px) {
+            position: absolute;
+            left: 80%;
+            transform: translateX(-50%);
+            border: 20px solid $kinda-gold;
+            border-radius: 50%;
+            z-index: 999;
+    }
+    }
+
+    .timeLine {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 5px;
+        height: 100%;
+        background-color: $kinda-gold;
+        @media only screen and (max-width: 600px) {
+            position: absolute;
+            left: 80%;
+            width: 5px;
+            height: 100%;
+            background-color: $kinda-gold;
+    }
+    }
+
+    .contentData {
+        display: grid;
+        padding-top: 5rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        font-size: 20px;
+        @media only screen and (max-width: 600px) {
+                display: grid;
+                grid-template-columns: 1fr;
+                padding-top: 5rem;
+                font-size: 20px;
+                flex-direction: column;
+                justify-content: start;
+                padding-left: 2rem;
+        }
+
+        h4 {
+            padding: 1rem 0;
+        }
+
+        .timeLinePoint {
+            display: inline-block;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 5px;
+            width: 20rem;
+            background-color: $kinda-gold;
+        }
+
+        .circleContent {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 1rem;
+            border: 2px solid $kinda-gold;
+            background-color: $kinda-black;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            z-index: 999;
+            @media only screen and (max-width: 600px) {
+                position: absolute;
+                left: 80%;
+                margin-top: 0;
+                border: 2px solid $kinda-gold;
+                background-color: $kinda-black;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                z-index: 999;
+        }
+        }
+
+        a {
+            color: $kinda-white;
+            align-items: center;
+            display: inline-flex;
+            align-items: center;
+
+            img {
+                width: 35px;
+                height: 35px;
+                filter: invert(1);
+            }
+        }
+
+        .event {
+            width: 20rem;
+            text-align: right;
+            margin: auto;
+            @media only screen and (max-width: 600px) {
+                width: 15rem;
+                text-align: left;
+                margin-left: 2rem;
+        }
+
+
+            &:nth-child(2n) {
+                direction: revert;
+                text-align: left;
+                padding-top: 15rem;
+            }
+        }
+
+       
+    }
+}
+
+.LoadingPage {
+    color: $kinda-white;
+    font-size: 28px;
+    font-family: Linden Hill;
+    text-align: center;
+}
