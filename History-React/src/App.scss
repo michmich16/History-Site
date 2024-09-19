@@ -16,7 +16,7 @@ body {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    filter: none; /* Prevent inversion */
+    filter: invert(1); 
     
     @media only screen and (max-width: 600px) {
       right: 20rem;
@@ -32,7 +32,7 @@ body {
     border: none;
     cursor: pointer;
     z-index: 1000;
-    filter: none; /* Prevent inversion */
+    filter: invert(1); 
     
     @media only screen and (max-width: 600px) {
       right: 1rem;
