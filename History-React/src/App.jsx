@@ -39,26 +39,29 @@ function App() {
   }, []);
 
   return (
-    <div className={isLightMode ? 'light-mode' : ''}>
-      <BrowserRouter>
-        <Routes>
-          <Route path={"/"} element={<MainLayout />}>
-            <Route index element={<TodayPage />} />
-            <Route path={`/about`} element={<AboutPage />} />
-            <Route path={`/date`} element={<DatePage />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-      <button className='lightMode' onClick={toggleLightMode}>
-        <img src={Light} alt="Light-mode" />
-      </button>
-      {showUpwardButton && (
-        <button className='upWard' onClick={scrollToTop}>
-          <img src={Upward} alt="BackToTop" />
+      <div className={isLightMode ? 'light-mode' : ''}>
+        <div className="content-container">
+          <BrowserRouter>
+            <Routes>
+              <Route path={"/"} element={<MainLayout />}>
+                <Route index element={<TodayPage />} />
+                <Route path={`/about`} element={<AboutPage />} />
+                <Route path={`/date`} element={<DatePage />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </div>
+        <button className='lightMode' onClick={toggleLightMode}>
+          <img src={Light} alt="Light-mode" />
         </button>
-      )}
-    </div>
-  );
+        {showUpwardButton && (
+          <button className='upWard' onClick={scrollToTop}>
+            <img src={Upward} alt="BackToTop" />
+          </button>
+        )}
+      </div>
+    );
+    
 }
 
 export default App;

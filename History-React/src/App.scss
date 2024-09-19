@@ -8,7 +8,7 @@
 body {
   background-color: $kinda-dark;
   transition: all 0.3s ease;
-
+  
   .lightMode {
     position: absolute;
     right: 8rem;
@@ -16,35 +16,35 @@ body {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    filter: invert(1);
-
+    filter: none; /* Prevent inversion */
+    
     @media only screen and (max-width: 600px) {
       right: 20rem;
       top: 62rem;
     }
-
   }
 
-.upWard {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 1000;
-  filter: invert(1);
-
-  @media only screen and (max-width: 600px) {
-    right: 1rem;
-    bottom: 1rem;
+  .upWard {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    filter: none; /* Prevent inversion */
+    
+    @media only screen and (max-width: 600px) {
+      right: 1rem;
+      bottom: 1rem;
+    }
   }
-}
-}
 
- 
+  .content-container {
+    transition: all 0.3s ease;
+  }
 
-.light-mode {
-  filter: invert(1);
-
+  .light-mode .content-container {
+    filter: invert(1); /* Apply inversion only to content */
+  }
 }
