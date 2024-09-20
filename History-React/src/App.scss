@@ -17,6 +17,10 @@ body {
     border: none;
     cursor: pointer;
     filter: invert(1); 
+    @media only screen and (max-width: 1200px) {
+      right: 40rem;
+      top: 62rem;
+    }
     
     @media only screen and (max-width: 600px) {
       right: 20rem;
@@ -33,6 +37,10 @@ body {
     cursor: pointer;
     z-index: 1000;
     filter: invert(1); 
+    @media only screen and (max-width: 1200px) {
+      right: 1rem;
+      bottom: 1rem;
+    }
     
     @media only screen and (max-width: 600px) {
       right: 1rem;

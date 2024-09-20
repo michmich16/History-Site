@@ -1,0 +1,64 @@
+@import '../../assets/helper/Helper.module.scss';
+
+.contentStyle {
+    color: $kinda-white;
+    position: relative;
+    padding-top: 4rem;
+    width: 80rem;
+    margin: auto;
+    background-color: $kinda-dark;
+
+    @media only screen and (max-width: 1200px) {
+        color: $kinda-white;
+        position: relative;
+        padding-top: 4rem;
+        width: 100%;
+        margin: auto;
+        background-color: $kinda-dark;
+    }
+
+    .articleStyle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        h3{
+            font-size: 38px;
+            padding-bottom: 5rem;
+        }
+
+        .foodList {
+            h4 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            .foodPic {
+                width: 60rem;
+                height: 60rem;
+            }
+            @media only screen and (max-width: 1200px) {
+
+                .foodPic {
+                    width: 30rem;
+                    height: 30rem;
+                }
+            }
+            
+            @media only screen and (max-width: 600px) {
+                .foodPic {
+                    width: 20rem;
+                    height: 20rem;
+                }
+            }
+        }
+
+
+
+    }
+}
+

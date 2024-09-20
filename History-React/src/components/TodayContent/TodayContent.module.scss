@@ -8,7 +8,8 @@
     width: 80rem;
     margin: auto;
     background-color: $kinda-dark;
-    @media only screen and (max-width: 600px) {
+    font-family: Linden Hill;
+    @media only screen and (max-width: 1200px) {
         color: $kinda-white;
         position: relative;
         padding-top: 4rem;
@@ -24,7 +25,7 @@
         border: 20px solid $kinda-gold;
         border-radius: 50%;
         z-index: 999;
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 1200px) {
             position: absolute;
             left: 80%;
             transform: translateX(-50%);
@@ -41,7 +42,7 @@
         width: 5px;
         height: 100%;
         background-color: $kinda-gold;
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 1200px) {
             position: absolute;
             left: 80%;
             width: 5px;
@@ -56,7 +57,7 @@
         grid-template-columns: 1fr 1fr;
         gap: 5rem;
         font-size: 20px;
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 1200px) {
                 display: grid;
                 grid-template-columns: 1fr;
                 padding-top: 5rem;
@@ -91,7 +92,7 @@
             height: 25px;
             border-radius: 50%;
             z-index: 999;
-            @media only screen and (max-width: 600px) {
+            @media only screen and (max-width: 1200px) {
                 position: absolute;
                 left: 80%;
                 margin-top: 0;
@@ -121,7 +122,7 @@
             width: 20rem;
             text-align: right;
             margin: auto;
-            @media only screen and (max-width: 600px) {
+            @media only screen and (max-width: 1200px) {
                 width: 15rem;
                 text-align: left;
                 margin-left: 2rem;
@@ -132,6 +133,9 @@
                 direction: revert;
                 text-align: left;
                 padding-top: 15rem;
+                @media only screen and (max-width: 1200px) {
+                    padding-top: 0;
+            }
             }
         }
 
